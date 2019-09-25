@@ -14,9 +14,9 @@ namespace Passwords.Api.Data.Maps
 
             builder.Property(a => a.Service).HasColumnType("nvarchar(80)").IsRequired();
 
-            //builder.HasMany(a => a.Contents)
-            //    .WithOne(a => a.Account)
-            //    .HasForeignKey(a => a.AccountId);
+            builder.HasMany(a => a.Contents)
+                .WithOne(a => a.Account)
+                .HasForeignKey(a => a.AccountId);
                 //.OnDelete(DeleteBehavior.Restrict);
         }
     }

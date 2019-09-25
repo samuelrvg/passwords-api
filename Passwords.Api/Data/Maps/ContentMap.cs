@@ -17,9 +17,9 @@ namespace Passwords.Api.Data.Maps
             builder.Property(c => c.Cpf).HasColumnType("nvarchar(11)");
             builder.Property(c => c.Observacao).HasColumnType("nvarchar(800)");
 
-            builder.HasOne(c => c.Account)
-                .WithMany(c => c.Contents)
-                .HasForeignKey(e => e.ContentId);
+            //builder.HasOne(c => c.Account)
+                //.WithMany(c => c.Contents)
+                //.HasForeignKey(e => e.ContentId);
         }
     }
 }
